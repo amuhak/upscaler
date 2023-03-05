@@ -20,6 +20,7 @@ input("""Enter input image
 Press Enter to continue...""")
 in_path = askopenfilename()
 out_path=path1[0:path1.rindex("\\")]
-out_path+="\\out.png"
+name=in_path[path1.rindex("\\"):in_path.index('.')]+".png"
+out_path+="\\(1)"+name
 path1+="\\realesrgan-ncnn-vulkan-20220424-windows\\realesrgan-ncnn-vulkan.exe"
 os.system(path1+" -i \""+in_path+"\" -n \""+model_name+"\" -o \""+out_path+"\" -v")
