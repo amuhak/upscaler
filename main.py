@@ -22,5 +22,4 @@ in_path = askopenfilename()
 out_path=path1[0:path1.rindex("\\")]
 out_path+="out.png"
 path1+="\\realesrgan-ncnn-vulkan-20220424-windows\\realesrgan-ncnn-vulkan.exe"
-os.system(path1+" -i \""+in_path+"\" -n \""+model_name+"\" -o \""+out_path+"\"")
-print("DONE")
+os.system(path1+" -i \""+in_path+"\" -n \""+model_name+"\" -o \""+out_path+"\" -v")
